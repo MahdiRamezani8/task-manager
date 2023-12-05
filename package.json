@@ -1,0 +1,14 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "it's a quiz app",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass ./sass/style.scss ./sass/style.css -w"
+  },
+  "author": "mahdi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

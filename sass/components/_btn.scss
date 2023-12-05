@@ -1,0 +1,12 @@
+.btn {
+  height: 3rem;
+  padding: 0 1rem;
+  background-color: $aqua;
+  border-radius: 2rem;
+  color: #fff;
+  font-family: poppinsBold;
+
+  &--shadow {
+    @include shadow;
+  }
+}

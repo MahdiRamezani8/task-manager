@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <script defer type="module" src="src/js/App.js"></script>
+    <link rel="stylesheet" href="src/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+  <body>
+    <!-- add a new task modal -->
+    <form class="modal">
+      <span class="modal__close">
+        <i class="fa fa-close"></i>
+      </span>
+      <!-- description input -->
+      <span class="title"> <span>create task</span> </span>
+      <div class="modal__head">
+        <input
+          type="text"
+          class="modal__head__input"
+          placeholder="task description"
+        />
+      </div>
+
+      <!-- choosing categoty -->
+      <div class="title"><span>categories</span></div>
+      <div class="modal__choose-category">
+        <label for="later" class="category category--x category--purple"
+          >later</label
+        >
+        <input
+          type="radio"
+          name="category"
+          id="later"
+          class="modal__choose-category__opt"
+          value="important"
+        />
+        <label for="important" class="category category--x category--yellow"
+          >important</label
+        >
+        <input
+          type="radio"
+          name="category"
+          id="important"
+          class="modal__choose-category__opt"
+          value="completed"
+        />
+        <label for="workout" class="category category--x category--red"
+          >workout</label
+        >
+        <input
+          type="radio"
+          name="category"
+          id="workout"
+          class="modal__choose-category__opt"
+          value="study"
+        />
+        <label for="completed" class="category category--x category--green"
+          >completed</label
+        >
+        <input
+          type="radio"
+          name="category"
+          id="completed"
+          class="modal__choose-category__opt"
+          value="later"
+        />
+      </div>
+
+      <!-- add a new category section -->
+      <div class="title"><span>add category</span></div>
+      <div class="modal__add-category">
+        <input
+          type="text"
+          class="modal__add-category__input"
+          placeholder="enter category name"
+        />
+        <div class="modal__add-category__color">
+          <label for="">choose background:</label>
+          <input type="color" />
+        </div>
+      </div>
+
+      <div class="title"><span>submit</span></div>
+      <div class="modal__foot">
+        <button class="btn btn--white">SUMBIT TASK</button>
+      </div>
+    </form>
+
+    <!-- container -->
+    <div class="container">
+      <!-- page header -->
+      <header class="head">
+        <div class="head__row">
+          <!-- dark mode and light mode btns -->
+          <i class="fa fa-moon-o"></i>
+          <!-- <i class="fa fa-sun-o"></i> -->
+        </div>
+        <div class="head__row">
+          <h1 class="head__row__title">
+            personal <br />
+            task manager
+          </h1>
+        </div>
+      </header>
+
+      <!-- page main section -->
+      <main class="app">
+        <!-- app header: buttons -->
+        <section class="app__head">
+          <button class="btn btn--shadow">
+            <span class="tasks-count">5</span> tasks
+          </button>
+          <button class="btn btn--shadow open-modal">add a task</button>
+        </section>
+
+        <!-- app body: tasks list and tab bar -->
+        <section class="app__body">
+          <!-- tasks list -->
+          <ul class="list">
+            <li class="list__item">
+              <p class="list__item__p">learn js</p>
+              <span class="list__item__opts">
+                <i class="fa fa-ellipsis-v"></i>
+                <ul class="list__item__opts__list">
+                  <li class="list__item__opts__list__item">
+                    edit <i class="fa fa-pencil"></i>
+                  </li>
+                  <li class="list__item__opts__list__item">
+                    delete <i class="fa fa-trash"></i>
+                  </li>
+                  <li class="list__item__opts__list__item">
+                    change category <i class="fa fa-folder-open"></i>
+                  </li>
+                </ul>
+              </span>
+              <div class="category category--v category--green">completed</div>
+            </li>
+
+            <li class="list__item">
+              <p class="list__item__p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                quibusdam qui non laborum fuga aperiam, tempora corporis
+                officiis magnam a, at, voluptatum labore aut adipisci unde
+                aliquid reprehenderit atque voluptates.
+              </p>
+              <span class="list__item__opts">
+                <i class="fa fa-ellipsis-v"></i>
+                <ul class="list__item__opts__list">
+                  <li class="list__item__opts__list__item">
+                    edit <i class="fa fa-pencil"></i>
+                  </li>
+                  <li class="list__item__opts__list__item">
+                    delete <i class="fa fa-trash"></i>
+                  </li>
+                  <li class="list__item__opts__list__item">
+                    change category <i class="fa fa-folder-open"></i>
+                  </li>
+                </ul>
+              </span>
+              <div class="category category--v category--green">completed</div>
+            </li>
+          </ul>
+          <!-- tab bar -->
+          <ul class="app__body__tabs">
+            <li class="app__body__tabs__tab">Active</li>
+            <li class="app__body__tabs__tab">Active</li>
+            <li class="app__body__tabs__tab">Active</li>
+            <li class="app__body__tabs__tab">Active</li>
+            <li class="app__body__tabs__tab">Active</li>
+            <li class="app__body__tabs__tab app__body__tabs__tab--active">
+              All
+            </li>
+          </ul>
+        </section>
+
+        <!-- app aside: left menu for adding categories -->
+        <section class="app__aside">
+          <!-- aside title -->
+          <span class="app__aside__title">
+            <div class="title"><span>categories</span></div>
+          </span>
+
+          <!-- categories list -->
+          <ul class="app__aside__list">
+            <li
+              class="app__aside__list__item category category--x category--green"
+            >
+              completed
+            </li>
+            <li
+              class="app__aside__list__item category category--x category--yellow"
+            >
+              important
+            </li>
+            <li
+              class="app__aside__list__item category category--x category--purple"
+            >
+              later
+            </li>
+            <li
+              class="app__aside__list__item category category--x category--red"
+            >
+              workout
+            </li>
+          </ul>
+
+          <button class="btn">Add Categoriy</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

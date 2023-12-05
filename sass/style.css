@@ -1,10 +1,10 @@
 @font-face {
   font-family: poppins;
-  src: url(../../src/fonts/Poppins-Regular.ttf); }
+  src: url(../src/fonts/Poppins-Regular.ttf); }
 
 @font-face {
   font-family: poppinsBold;
-  src: url(../../src/fonts/Poppins-Bold.ttf); }
+  src: url(../src/fonts/Poppins-Bold.ttf); }
 
 *,
 *::after,
@@ -331,3 +331,8 @@ body {
 @media (min-width: 768px) {
   .modal__choose-category {
     grid-template-columns: repeat(4, 1fr); } }
+
+.footer {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: auto; }
